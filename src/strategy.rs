@@ -39,8 +39,8 @@ impl Default for StrategyRawConfig {
             open_min_interval_sec: 30,
             limit_close_elapsed_sec: 60,
             close_waiting_elapsed_sec: 30,
-            active_fee_ratio: 0f64,
-            passive_fee_ratio: 0f64,
+            active_fee_ratio: 0.02f64,
+            passive_fee_ratio: 0.015f64,
         }
     }
 }
@@ -66,8 +66,8 @@ impl From<StrategyRawConfig> for StrategyConfig {
             open_min_interval: config.open_min_interval_sec as Time * 1000,
             limit_close_elapsed: config.limit_close_elapsed_sec as Time * 1000,
             close_waiting_elapsed: config.close_waiting_elapsed_sec as Time * 1000,
-            active_fee_ratio: config.active_fee_ratio / 10000f64,
-            passive_fee_ratio: config.passive_fee_ratio / 10000f64,
+            active_fee_ratio: config.active_fee_ratio / 100f64,
+            passive_fee_ratio: config.passive_fee_ratio / 100f64,
         }
     }
 }
