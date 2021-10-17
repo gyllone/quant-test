@@ -21,6 +21,8 @@ close:
 - active traded: *0.02%*
 - passive traded: *0.015%*
 ```
+load data used: 3.5736739s
+
 [Test Result]
 time used: 17.1648ms
 yield rate: 0.0140%
